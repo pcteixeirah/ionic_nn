@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <button ion-button color="primary">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </button>
+      <button ion-button routerLink="/signup">Sign up</button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <div id="header">
+    <img src="assets/icon/logo.png" />
+  </div>
+
+  <form id="form">
+    <ion-input placeholder="Email"></ion-input>
+    <ion-input type="password" placeholder="Password"></ion-input>
+    <button ion-button expand="block" shape="round">Login</button>
+  </form>
+  
+  
+</ion-content>
