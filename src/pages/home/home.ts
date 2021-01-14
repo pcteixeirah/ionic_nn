@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core'; //ViewChild
-import { IonicPage, NavController} from 'ionic-angular';  // 
+import { Component } from '@angular/core'; //ViewChild, OnInit 
+import { IonicPage} from 'ionic-angular';  // , NavController
 //import { Router } from 'angular-route';
 
 //import { InputComponent } from '../../components/input/input';
@@ -10,14 +10,14 @@ import { IonicPage, NavController} from 'ionic-angular';  //
   templateUrl: 'home.html',
   //styleUrls: ['home.scss'],
 })
-export class HomePage implements OnInit {
+export class HomePage {  //implements OnInit 
 
-  constructor(public navCtrl: NavController) {}  //private router: Router, 
+  constructor() {}  //private router: Router, public navCtrl: NavController
   /*
   navigate(){
     this.router.navigate(['/signup'])
   }
   */
-  ngOnInit() {}
+  //ngOnInit() {}
 
 }

@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { QuicklinkModule } from 'ngx-quicklink'; // QuicklinkStrategy,
+//import { RouterModule } from 'angular-route';
 //import { RouteReuseStrategy } from 'angular-route';
 //import { IonicRouteStrategy } from '../app/reuse--strategy';
 
@@ -15,7 +17,7 @@ import { ContactPage } from '../pages/contact/contact';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-//import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 //import { SignupPageRoutingModule } from '../pages/signup/signup-routing.module'
 //import { HomePageRoutingModule } from '../pages/home/home-routing.module'
 
@@ -29,13 +31,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MenuPage,
     ContactPage,
     //InputComponent,
-    //AppRoutingModule
     //SignupPageRoutingModule,
     //HomePageRoutingModule
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    QuicklinkModule,
+    IonicModule.forRoot(MyApp),
+    //RouterModule.forRoot([AppRoutingModule], {
+      //preloadingStrategy: QuicklinkStrategy
+
+    //})
+    //AppRoutingModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -50,7 +57,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    //{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}
+    {provide: QuicklinkModule, useClass: AppRoutingModule}
   ],
   exports: [
     //InputComponent
