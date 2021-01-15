@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { QuicklinkModule } from 'ngx-quicklink'; // QuicklinkStrategy,
@@ -35,7 +35,7 @@ import { AppRoutingModule } from './app-routing.module';
     //HomePageRoutingModule
   ],
   imports: [
-    BrowserModule,
+    HttpClientModule,
     QuicklinkModule,
     IonicModule.forRoot(MyApp),
     //RouterModule.forRoot([AppRoutingModule], {

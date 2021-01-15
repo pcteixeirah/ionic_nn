@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+//import { CommonModule } from '@angular/common/';
+//import { FormsModule } from '@angular/forms';
 import { IonicPageModule } from 'ionic-angular';
 import { HomePage } from './home';
 import { InputComponent } from '../../components/input/input';
@@ -11,8 +12,9 @@ import { HomePageRoutingModule } from './home-routing.module';
     HomePage,
   ],
   imports: [
-    CommonModule,
-    FormsModule,
+    //CommonModule,
+    //FormsModule,
+    HttpClientModule,
     InputComponent,
     IonicPageModule.forChild(HomePage),
     HomePageRoutingModule
